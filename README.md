@@ -12,6 +12,9 @@ Simply verify whether a list of domain name servers (DNS servers) finds the doma
 # Pre-requisites
 "Domain Nameserver Accuracy Checker" uses the excellent JHSoftware.DnsClient library for the actual checking. Since JHSoftware.DnsClient.dll is not open source, download it from http://simpledns.com/ and add it to /Domain-Nameserver-Accuracy-Checker/assets in order for the project to build and run.
 
+# Binaries
+Because of the closed component, no binaries are available.You can however build and run the app yourself using Visual Studio (https://visualstudio.microsoft.com/vs/community/).
+
 # Disclaimer
 **Do not set the "Time between DNS queries" slider too low, as on some weaker networks this may result in an apparent (temporary) loss of internet connection. The author is definitely NOT responsible for any misuse of this application and of its code.**
 
