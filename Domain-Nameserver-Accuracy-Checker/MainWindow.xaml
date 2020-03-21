@@ -1,0 +1,32 @@
+﻿<Window x:Class="Domain_Nameserver_Accuracy_Checker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Domain_Nameserver_Accuracy_Checker"
+        mc:Ignorable="d"
+        Title="Domain Nameserver Accuracy Checker" Height="371.5" Width="743.575" MinWidth="635" MinHeight="265">
+    <Grid x:Name="gridMain">
+        <Label x:Name="lblOne" Content="1." HorizontalAlignment="Left" Margin="10,3,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="ExtraBlack"/>
+        <Button x:Name="btnLoadFromTxtFile" Content="Load TXT or CSV file" HorizontalAlignment="Left" Margin="36,10,0,0" VerticalAlignment="Top" Width="229" Click="btnLoadFromTxtFile_Click"/>
+        <Button x:Name="btnPaste" Content="Paste from cliboard" HorizontalAlignment="Left" Margin="270,10,0,0" VerticalAlignment="Top" Width="112" Click="btnPaste_Click"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="90" Click="btnClear_Click"/>
+        <Button x:Name="btnSave" Content="Save as TXT file" HorizontalAlignment="Right" Margin="0,10,105,0" VerticalAlignment="Top" Width="112" Click="btnSave_Click" />
+        <TextBox x:Name="tbNs" Margin="10,35,10,176" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+        <Label x:Name="lblTwo" Content="2." HorizontalAlignment="Left" Margin="10,0,0,140" VerticalAlignment="Bottom" FontSize="16" FontWeight="ExtraBlack"/>
+        <GroupBox Header="Domain Nameserver Accuracy Checks" Margin="10,0,10,41" VerticalAlignment="Bottom" Height="94">
+            <Grid>
+                <Button x:Name="btnCleanNameserversThatDontKnowExistingDomain" Content="Delete NS that do NOT know the following existant domain:" VerticalAlignment="Top" Margin="10,10,0,0" Click="btnCleanNameserversNotKnowingGoogle_Click" HorizontalAlignment="Left" Width="347" Height="22"/>
+                <Button x:Name="btnCleanNameserversThatKnowNonExistingDomain" Content="Delete NS that DO know the following non-existant domain:" VerticalAlignment="Top" Margin="10,37,0,0" Click="btnCleanNameserversKnowingNonExistingServer_Click" HorizontalAlignment="Left" Width="347" Height="22"/>
+                <TextBox x:Name="tbCleanNameserversThatDontKnowExistingDomain" Height="22" Margin="362,10,10,0" TextWrapping="Wrap" Text="google.com" VerticalAlignment="Top"/>
+                <TextBox x:Name="tbCleanNameserversThatKnowNonExistingDomain" Height="22" Margin="362,37,10,0" TextWrapping="Wrap" Text="qskdjfqskdjvmlkjvmlxwkjcvmlkjqdlmfkjdslmfkgjdsflmgkj.com" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>
+        <ProgressBar x:Name="pbNameserverCleaner" Margin="10,0,100,10" Height="22" VerticalAlignment="Bottom" />
+        <Label x:Name="lblAbout" Content="www.barbez.eu" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" Foreground="#FF0066CC" Cursor="Hand" MouseUp="lblAbout_MouseUp"/>
+        <Label Content="Time between DNS queries:" Height="28" Margin="35,0,0,139" x:Name="lblWaitTimeBetweenDnsQuestions" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="164" />
+        <Slider x:Name="sldWaitTimeBetweenDnsQuestions" VerticalAlignment="Bottom" Height="28" Margin="221,0,49,139" Maximum="2000" Minimum="0" SmallChange="1" TickPlacement="BottomRight" Value="2000" />
+        <Label Content="2 sec" VerticalAlignment="Bottom" Margin="0,0,10,141" Opacity="0.3" HorizontalAlignment="Right" Width="39"/>
+        <Label Content="0 ms" VerticalAlignment="Bottom" Margin="185,0,0,141" Opacity="0.3" RenderTransformOrigin="0.276,0.538" HorizontalAlignment="Left" Width="36"/>
+    </Grid>
+</Window>

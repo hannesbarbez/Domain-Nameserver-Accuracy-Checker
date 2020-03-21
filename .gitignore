@@ -348,3 +348,4 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/Domain-Nameserver-Accuracy-Checker/assets/JHSoftware.DnsClient.dll

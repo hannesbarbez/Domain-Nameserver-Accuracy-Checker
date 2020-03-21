@@ -1,0 +1,1 @@
+CertUtil -hashfile "Domain-Nameserver-Accuracy-Checker.exe" SHA1 >> sha1.txt
