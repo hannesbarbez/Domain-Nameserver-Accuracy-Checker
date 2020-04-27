@@ -19,6 +19,9 @@ Because of the closed component, no public binaries are available.
 
 However, you can build and run the app yourself using Visual Studio (https://visualstudio.microsoft.com/vs/community/).
 
+# Remarks
+The app simply checks IF an answer comes from a given DNS Server. It does not, however, verify if the server response is correct/safe.
+
 # Disclaimer
 **Do not set the "Time between DNS queries" slider too low, as on some weaker networks this may result in an apparent (temporary) loss of internet connection. The author is definitely NOT responsible for any misuse of this application and of its code.**
 
