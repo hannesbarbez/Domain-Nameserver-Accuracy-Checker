@@ -1,8 +1,8 @@
+# Domain Nameserver Accuracy Checker
 https://www.barbez.eu/
 
 ![Domain Nameserver Accuracy Checker screenshot](https://barbez.eu/wp-content/uploads/2020/03/200321a.png)
 
-# Domain Nameserver Accuracy Checker
 Simply verify whether a list of domain name servers (DNS servers) finds the domains they should, but not those they should not. Domain Nameserver Accuracy Checker checks this automatically and removes those that fail the tests.
 
 # Features
